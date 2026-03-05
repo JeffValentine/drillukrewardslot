@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DrillUK Reward Slot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="hidden">
+    <div class="gif-bg" aria-hidden="true"></div>
+    <div class="vignette"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="money-rain" aria-hidden="true"></div>
+    <div class="sticker-field" id="stickerField" aria-hidden="true"></div>
+
+    <div class="frame">
+      <div class="marquee-lights" aria-hidden="true"></div>
+      <div class="topbar">
+        <div class="brand">
+          <span class="brand-glow" id="brandText">DRILL-UK</span>
+          <span class="sub">QUEST REWARD</span>
+        </div>
+        <button class="close" id="closeBtn">ESC</button>
+      </div>
+
+      <div class="machine">
+        <div class="halo" aria-hidden="true"></div>
+
+        <div class="reels">
+          <div class="reel" data-reel="0"><div class="strip"></div></div>
+          <div class="reel" data-reel="1"><div class="strip"></div></div>
+          <div class="reel" data-reel="2"><div class="strip"></div></div>
+
+          <!-- selector window centered -->
+          <div class="selector">
+            <div class="selector-inner"></div>
+            <div class="selector-scan"></div>
+          </div>
+        </div>
+
+        <div class="readout">
+          <div class="rarity" id="rarityPill">COMMON</div>
+          <div class="result" id="resultText">Press SPIN</div>
+        </div>
+        <div class="beatbars" id="beatBars" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="ticker" id="tickerText">DRILL-UK LIVE JACKPOT STREAM ACTIVE</div>
+
+        <div class="actions">
+          <label class="volume-control" for="volumeSlider">
+            <span>VOL</span>
+            <input id="volumeSlider" type="range" min="0" max="100" step="1" value="40" />
+            <strong id="volumeValue">40%</strong>
+          </label>
+          <button id="spinBtn" class="btn primary">SPIN</button>
+          <button id="skipBtn" class="btn ghost">SKIP</button>
+        </div>
+      </div>
+
+      <div class="footnote">
+        <span class="hint">Disclaimer: Drill-UK Reserves all rights to revoking rewards deemed not valid. Stretching resolution other then default(1920x1080) might alter results. Results due to stretched resolution are not final.<code></code></span>
+      </div>
+
+      <canvas id="fx"></canvas>
+      <div class="impact-flash" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
